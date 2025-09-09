@@ -30,6 +30,6 @@ public class Favoritos {
             inverseJoinColumns = @JoinColumn(name = "livro_id")
     )
     //Usuario pode ter livros associado a seu favorito
-    private List<Livro> livros = new ArrayList<>();
+    private List<LivroEntity> livros = new ArrayList<>();
 
 }

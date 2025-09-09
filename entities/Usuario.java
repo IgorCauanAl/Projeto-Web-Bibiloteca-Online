@@ -54,11 +54,11 @@ public class Usuario {
             inverseJoinColumns = @JoinColumn(name ="livro_id")
     )
     //Livros curtidos pelo usuário
-    private List<Livro> livrosCurtidos = new ArrayList<>();
+    private List<LivroEntity> livrosCurtidos = new ArrayList<>();
 
     //Lista de Livros Publicados
     @OneToMany(mappedBy = "usuario")
-    private List<Livro> livrosPublicados = new ArrayList<>();
+    private List<LivroEntity> livrosPublicados = new ArrayList<>();
 
     //Permissão do usuário
     @ManyToMany(fetch = FetchType.EAGER)
@@ -68,5 +68,10 @@ public class Usuario {
         inverseJoinColumns = @JoinColumn(name="usuario_id")
     )
     private Set<Role> roles = new HashSet<>();
+
+
+    //Token do usuario para recuperação da senha
+    @OneToOne(mappedBy = "usuario", cascade = CascadeType.ALL)
+    private TokenSenha tokenSenha;
 
 }

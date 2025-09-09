@@ -10,7 +10,7 @@ import org.mapstruct.Mapping;
 public interface LivroMapper {
 
     // Converte LivroDTO para LivroEntity
-    @Mapping(target = "id", source = "dto.id")
+
     LivroEntity toEntity(LivroDTO dto);
 
     // Converte LivroEntity para LivroDTO

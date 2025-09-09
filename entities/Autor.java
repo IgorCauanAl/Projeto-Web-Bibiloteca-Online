@@ -35,7 +35,7 @@ public class Autor {
 
     //Para cada autor há vários livros
     @OneToMany(mappedBy = "autor")
-    private List<Livro> livros = new ArrayList<>();
+    private List<LivroEntity> livros = new ArrayList<>();
 
 
 

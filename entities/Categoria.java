@@ -27,6 +27,6 @@ public class Categoria {
     private String nomeCategoria;
 
     @ManyToMany(mappedBy = "categorias")
-   private List<Livro> livros = new ArrayList<>();
+   private List<LivroEntity> livros = new ArrayList<>();
 
 }

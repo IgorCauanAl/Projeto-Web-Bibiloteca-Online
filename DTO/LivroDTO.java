@@ -4,38 +4,36 @@ import br.ifba.edu.BancoDeDadosIfba.biblioteca_orm.model.GeneroEnum;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class LivroDTO{
-        Long id;
+        private Long id;
 
         @NotBlank(message = "O título é obrigatório")
-        String nome;
+        private String nome;
 
         @NotBlank(message = "O autor é obrigatório")
-        String autor;
+        private String autor;
 
         @NotNull(message = "Campo ano de Publicação obrigatorio!")
-        Integer anoPublicacao;
+        private Integer anoPublicacao;
 
-        String capaUrl;
+        private String capaUrl;
 
-        String pdfUrl;
+        private String pdfUrl;
 
         @Size(max = 2000)
         @NotBlank(message = "Campo Sinopse obrigatorio!")
-        String sinopse;
+        private String sinopse;
 
-        GeneroEnum genero;
+        private GeneroEnum genero;
 
         @Size(max = 1000)
         @NotBlank(message = "Campo descrição do autor obrigatorio!")
-        String descricaoAutor;
+        private String descricaoAutor;
 
 
  }

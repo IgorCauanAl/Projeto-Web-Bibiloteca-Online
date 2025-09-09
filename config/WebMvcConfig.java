@@ -1,4 +1,4 @@
-package LuizHFAnjos.com.github.Biblioteca.config;
+package br.ifba.edu.BancoDeDadosIfba.biblioteca_orm.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
